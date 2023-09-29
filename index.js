@@ -35,11 +35,11 @@ app.get("/webhook", (req, res) => {
       console.log(
         "Responds with '403 Forbidden' if verify tokens do not match"
       );
-      res.sendStatus(403);
+      res.send("ERROR");
     }
   }
   console.log("Responds with '403 Forbidden' if verify tokens do not match");
-  res.sendStatus(403);
+  res.send("ERROR");
 });
 
 app.post("/webhook", (req, res) => {
