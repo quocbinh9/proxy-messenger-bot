@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 
 app.get("/webhook", (req, res) => {
   // Your verify token. Should be a random string.
-  const VERIFY_TOKEN = process.env.VERIFY_TOKEN;
+  const VERIFY_TOKEN = process.env.VERIFY_TOKEN || 287223757418787;
 
   console.log(req.query, VERIFY_TOKEN);
 
